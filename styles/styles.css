@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    font-family: "Noto Sans", sans serif;
+}
+
+
+/* Header*/
+
+header{
+    background-color: black; 
+    text-align: center;   
+}
+
+.logo{
+    width: 200px;
+    margin: 10px;
+    padding: 0 10px;
+    
+}
+nav{
+    margin: 0;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    margin: 0;
+    padding: 10px 40px;
+    color: magenta;
+    font-size: 20px;    
+}
+nav ul li a:hover {
+    color: darkmagenta;
+}
+
+a{
+    text-decoration: none;
+    color: magenta;
+}
+
+/* Main*/
+body {
+    background-color: #9B7EBD;
+}   
+.banner{
+    width: 100%;
+}
+
+/* Seccion productos*/
+#productos{
+    margin: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.productos-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 40px;
+    margin-top: 0;
+}
+.producto{
+    background-color: #ffff;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    flex: 1 1 250px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.imagen-productos{
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+.nombre-producto{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+.precio-producto{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.comprar-contenedor{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 5px;
+}
+.carrito-icono{
+    width: 20px;
+}
+.comprar:hover{
+    color: magenta;
+    cursor: pointer;
+}
+
+/*Seccion videos*/
+.videos-contenedor{
+    background-color: rgb(15, 1, 19);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+    gap: 20px;   
+}
+.video{
+    margin-left: 50px;
+}
+video{
+    width: 100%;
+    height: auto;
+    max-width: 300px;    
+}
+
+/*Seccion Reseñas*/
+.reseñas {
+    padding: 50px;
+    margin: 20px; 
+    border: 1px solid rgb(15, 1, 19);
+    border-radius: 5px; 
+}
+.grid-reseñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;
+}
+.reseña {
+    background-color: #dbc4f5;
+    padding: 15px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.reseña p {
+    margin-bottom: 10px; 
+}
+.avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/*Seccion contacto*/
+fieldset{
+    border: 2px solid rgb(15, 1, 19);
+    margin: 20px;
+    padding: 20px;
+}
+legend{
+    font-size: 20px;
+}
+.input-nombre{
+    width: 310px;
+    background-color: #dbc4f5;
+    border: none;
+}
+.input-correo{
+    width: 232px;
+    background-color: #dbc4f5;
+    border: none;
+}
+textarea{
+    background-color: #dbc4f5;
+    border: none;
+}
+.enviar{
+    width: 100px;
+    background-color: #dbc4f5;
+}
+.enviar:hover{
+    background-color: #a7a7a7;
+    cursor: pointer;
+}
+
+/*Seccion Footer*/
+footer {
+    background-color: black;
+    color: magenta;
+    text-align: center; 
+    padding: 20px; 
+    position: relative; 
+    bottom: 0;     
+}
+
+
+/*Seccion Media Query*/
+@media (max-width: 768px) {
+    .videos {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .input-nombre,
+    .input-correo,
+    textarea {
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    .enviar {
+        width: auto; 
+        padding: 10px; 
+    }
+}
