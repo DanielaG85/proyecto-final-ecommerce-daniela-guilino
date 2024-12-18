@@ -7,6 +7,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
     </style>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>NEKURAI</title>
 </head>
 <body>
@@ -14,133 +15,189 @@
     <div>
       <img src="./images/NEKURAI logo-fotor-20240523222858.png" class="logo" alt="logo-nekurai">
     </div>
-      <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>        
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#reseñas">Reseñas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+      <div class="bootstrap-navbar">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inicio" id="inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#videos">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reseñas">Reseñas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li>
+            <div class="carrito-cont">
+              <span id="contador-carrito" class="contador">0</span>
+              <a href="javascript:void(0);" id="mostrar-carrito">
+              <button id="ver-carrito" class="shopping-cart">
+                  <img src="./images/cart-fill.svg" alt="Carrito" />
+                  Ver carrito
+              </button></a>
+          </div>
+          </li>
+        </ul>
+      </div>
   </header>
   <main>
     <div>
       <img src="./images/banner1.jpg" class="banner" alt="banner-publicidad">
-    </div>
+    </div>   
     <div>
-      <h2 id="productos">Productos</h2>
+      <h2 id="productos"></h2>
     </div>
     <section class="productos-contenedor">    
       <div class="producto">
       <img src="./images/paleta1.jpg" class="imagen-productos" alt="paleta de sombras">
       <p class="nombre-producto">Paleta de sombras Obsidian</p>
       <p class="precio-producto">$32.000</p>
+      <button class="descripcion">Descripción</button>
+      <p class="descripcion-texto" data-producto-id="1" style="display: none;"></p>
       <div class="comprar-contenedor"> 
+        <button class="comprar" data-id="1">
         <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-        <p class="comprar">Comprar</p>
+        Comprar</button>
       </div>
       </div>
       <div class="producto">
       <img src="./images/iluminador.png" class="imagen-productos" alt="ilumninador">
       <p class="nombre-producto">Iluminador en crema Obsidian</p>
       <p class="precio-producto">$15.000</p>
+      <button class="descripcion">Descripción</button>
+      <p class="descripcion-texto" data-producto-id="2" style="display: none;"></p>
       <div class="comprar-contenedor"> 
+        <button class="comprar" data-id="2">
         <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-        <p class="comprar">Comprar</p>
+        Comprar</button>
       </div>
       </div>
       <div class="producto">
         <img src="./images/perfume.jpeg" class="imagen-productos" alt="perfume">
         <p class="nombre-producto">Perfume Obsidian</p>
         <p class="precio-producto">$28.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="3" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="3">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+           Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/lipOil.jpg" class="imagen-productos" alt="aceite labios">
         <p class="nombre-producto">Lip Oil Obsidian</p>
         <p class="precio-producto">$11.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="4" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="4">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/balsamoOnix.jpg" class="imagen-productos" alt="balsamo para labios">
         <p class="nombre-producto">Bálsamo para Labios Obsidian</p>
         <p class="precio-producto">$14.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="5" style="display: none;"></p>
         <div class="comprar-contenedor"> 
-          <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          <button class="comprar" data-id="5">
+            <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/balsamoRhodonite.jpg" class="imagen-productos" alt="balsamo para labios">
         <p class="nombre-producto">Bálsamo para Labios Obsidian</p>
         <p class="precio-producto">$14.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="6" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="6">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/duoRubor.jpg" class="imagen-productos" alt="rubor duo">
         <p class="nombre-producto">Rubor Duo Obsidian</p>
         <p class="precio-producto">$18.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="7" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="7">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/rubores.png" class="imagen-productos" alt="rubor marmolado">
         <p class="nombre-producto">Rubor Marmolado Obsidian</p>
         <p class="precio-producto">$16.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="8" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="8">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/aguaMicelar.jpeg" class="imagen-productos" alt="polvo compacto">
         <p class="nombre-producto">Agua Micelar Melu</p>
         <p class="precio-producto">$10.500</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="9" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="9">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/serumDurazno.png" class="imagen-productos" alt="serum durazno">
         <p class="nombre-producto">Serum Durazno Melu</p>
         <p class="precio-producto">$10.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="10" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="10">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/serumKiwi.jpg" class="imagen-productos" alt="serum kiwi">
         <p class="nombre-producto">Serum Kiwi Melu</p>
         <p class="precio-producto">$10.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="11" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="11">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
       <div class="producto">
         <img src="./images/mousse.jpg" class="imagen-productos" alt="mousse limpieza">
-        <p class="nombre-producto">Mousse de Limpieza Feels Mood</p>
+        <p class="nombre-producto">Mousse de Limpieza</p>
         <p class="precio-producto">$14.000</p>
+        <button class="descripcion">Descripción</button>
+        <p class="descripcion-texto" data-producto-id="12" style="display: none;"></p>
         <div class="comprar-contenedor"> 
+          <button class="comprar" data-id="12">
           <img src="./images/shopping-cart.png" alt="carrito compras" class="carrito-icono">
-          <p class="comprar">Comprar</p>
+          Comprar</button>
         </div>
       </div>
-    </section>    
+    </section>
     <section class="videos-contenedor" id="videos">
       <div class="video">
       <video src="./videos/publi.mp4" controls></video>
@@ -165,7 +222,7 @@
               <img src="./images/woman 2.png" alt="avatar mujer" class="avatar">
               <p><strong>Luisa R.</strong></p>
               <p><strong>Compró:</strong> Lip Oil</p>
-              <p>Excelente calidad y un precio razonable. Muy satisfecho.</p>
+              <p>Excelente calidad y un precio razonable. Muy satisfecha.</p>
           </div>
           <div class="reseña">
               <img src="./images/woman3.png" alt="avatar mujer" class="avatar">
@@ -192,24 +249,46 @@
           <fieldset>
             <legend id="contacto"><b>Contacto</b></legend>
           <label for="nombre">Nombre</label>
-          <input type="text" name="nombre"class="input-nombre"
+          <input type="text"  id="nombre" name="nombre"class="input-nombre"
             pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" 
             title="Por favor, ingresa solo letras y espacios"
             required><br><br>
           <label for="correo">Correo Electrónico</label>
-          <input type="email" name="correo"class="input-correo"
+          <input type="email" id="correo" name="correo"class="input-correo"
             required 
             title="Por favor, ingresa un correo electrónico válido"><br><br>
-          <textarea name="mensaje" rows="5" cols="40"  placeholder="Escribe tu mensaje"></textarea><br><br>
+          <textarea name="mensaje" id="mensaje" rows="5" cols="45"  placeholder="Escribe tu mensaje"></textarea><br><br>
           <input type="submit" value="Enviar" class="enviar">
         </fieldset>
         </form>      
     </section>
+    <section id="carrito" style="display: none;">
+      <div class="carrito-contenedor">
+        <h1 class="titulo-carrito" >Carrito de Compras</h1>
+        <div id="carrito-lista"></div>
+        <button id="vaciar-carrito">Vaciar carrito</button>
+      </div>
+      <div id="checkout-modal">
+        <div class="checkout-content">
+            <h2 class="finalizar">Finalizar Compra</h2><br><br>
+            <p>Subtotal: $<span id="modal-subtotal">0</span></p><br>
+            <p>IVA: $<span id="modal-iva">0</span></p><br>
+            <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p><br>
+            <button onclick="realizarCompra()"class="confirmar">Confirmar Compra</button>
+            <button onclick="cerrarCheckout()"class="cancelar">Cancelar</button>
+        </div>
+    </div>
+    </section>
+    <h3><a href="#inicio" class="volver">Volver al Inicio</a></h3>
   </main>
   <footer>
     <p>Desarrollado por <strong>Daniela Guilino</strong></p>
     <p>&copy; 2024 Todos los derechos reservados.</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="./js/scripts.js"></script>
 </body>
 </html>
 
